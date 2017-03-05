@@ -1,4 +1,4 @@
-(defproject simple_asymmetric_java "0.1.0-SNAPSHOT"
+(defproject simple-asymmetric-java "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"

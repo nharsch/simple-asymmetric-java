@@ -1,4 +1,4 @@
-# simple_asymmetric_java
+# simple-asymmetric-java
 
 A Clojure library designed to ... well, that part is up to you.
 
