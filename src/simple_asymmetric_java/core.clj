@@ -2,20 +2,25 @@
   (:require 
     [caesium.crypto.secretbox :as sb]
     [caesium.crypto.sign :as sign]
-    [caesium.crypto.sodium:as s]
+    ;; [caesium.crypto.sodium:as s]
     ))
 
 
 ;; function in crypto.ts
 ; TODO: how can I export this function for external use?
-(defn generateKeys
-  (sign/keypair!))
+(def generateKeys
+  sign/keypair!)
+; make sure keys are different
+(assert 
+  (false? (= 
+            (:public (generateKeys)) 
+            (:public (generateKeys)))))
+
 
 (defn from_base54
   [string]
-  ;TODO: how to coerce 64 string to byte 
-  (byte-array string)
-  )
+  ;TODO: how to coerce 64 string to array of 8 bit int 
+  (byte-array string))
 
 ;TODO pick up here
 (defn hashPassword
